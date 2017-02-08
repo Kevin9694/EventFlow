@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="EventFlow">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <script src="js/eventflow.js"></script>
+</head>
+<body>
+
+<div class="container-fluid"  ng-controller="EventFlowControl">
+    <div class="row">
+        <div class="col-7">
+            <div class="card">
+                <div class="card-header">预览</div>
+                <ul>
+                    <li ng-repeat="event in events">
+                            <span>
+                                {{event.text}}
+                            </span>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-5">
+        <div class="card">
+            <div class="card-header">工具</div>
+            <div class="card-block">
+                <input type="text" ng-model="eventText" ng-model-instant>
+                <button ng-click="addEvent()" class="btn">添加</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+</body>
+</html>
